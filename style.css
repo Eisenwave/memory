@@ -36,6 +36,7 @@ td {
     border: 2px solid #87b387;
     min-height: var(--card-size);
     display: flex;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -57,8 +58,6 @@ td {
     height: var(--card-icon-size);
     padding: var(--card-padding);
 }
-
-
 
 .card:not(.flipped) {
     padding: 0;
