@@ -211,7 +211,7 @@ function clearBoard() {
         child.remove();
     }
     boardCards = 0;
-    E_MOVE_COUNTER.innerText = "0";
+    E_MOVE_COUNTER.innerText = E_PAIR_COUNTER.innerText = "0";
     chosen[0] = chosen[1] = null;
 }
 
