@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body id="body">
+
+<label for="select-size">Select Size:</label>
+<select id="select-size" name="select-size" oninput="onChooseSize(+this.value)">
+    <option value="4">XS (4 pairs)</option>
+    <option value="9" selected>S (9 pairs)</option>
+    <option value="16">M (16 pairs)</option>
+    <option value="25">L (25 pairs)</option>
+    <option value="36">XL (36 pairs)</option>
+</select>
+
+<label for="move-counter" style="margin-left: 2em">Moves: </label>
+<span id="move-counter">0</span>
+
+<hr/>
+
+<table id="board-table">
+</table>
+
+<hr/>
+
+
+<div style="opacity: 0.5">Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a
+        href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+<script src="main.js"></script>
+
+
+</body>
+</html>

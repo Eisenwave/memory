@@ -1,0 +1,64 @@
+:root {
+    --stripe1: rgba(0, 0, 0, 0);
+    --stripe2: rgba(0, 0, 0, 0.1);
+    --stripe-width: 8px;
+    --card-icon-size: 96px;
+    --card-padding: 8px;
+    --card-size: calc(var(--card-icon-size) + 2 * var(--card-padding));
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 14pt;
+}
+
+select {
+    font-size: inherit;
+}
+
+tr {
+    padding: 0;
+    margin: 0;
+}
+
+td {
+    border: none;
+}
+
+.board-table {
+    border-collapse: collapse;
+    padding: 0;
+}
+
+.stash {
+    padding: 8px;
+    background-color: #8cc284;
+    height: var(--card-size);
+}
+
+.card {
+    width: var(--card-size);
+    height: var(--card-size);
+    background: linear-gradient(135deg, #ffffff 0%, #c5a3cd 100%),
+    repeating-linear-gradient(45deg, var(--stripe1), var(--stripe1) var(--stripe-width),
+            var(--stripe2) var(--stripe-width), var(--stripe2) calc(var(--stripe-width) * 2));
+    background-blend-mode: darken;
+    border: 2px solid #888;
+
+    padding: 8px;
+    margin: 2px;
+}
+
+.card.flipped {
+    width: var(--card-icon-size);
+    height: var(--card-icon-size);
+    padding: var(--card-padding);
+}
+
+.card:not(.flipped) {
+    padding: 0;
+}
+
+.hidden {
+    opacity: 0;
+}
