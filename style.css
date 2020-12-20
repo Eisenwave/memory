@@ -32,11 +32,14 @@ td {
 
 .stash {
     padding: 8px;
-    background-color: #8cc284;
-    height: var(--card-size);
+    background-color: #c2f1bf;
+    border: 2px solid #87b387;
+    min-height: var(--card-size);
+    display: flex;
 }
 
 .card {
+    display: block;
     width: var(--card-size);
     height: var(--card-size);
     background: linear-gradient(135deg, #ffffff 0%, #c5a3cd 100%),
@@ -54,6 +57,8 @@ td {
     height: var(--card-icon-size);
     padding: var(--card-padding);
 }
+
+
 
 .card:not(.flipped) {
     padding: 0;

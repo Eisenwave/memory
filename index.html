@@ -8,7 +8,7 @@
 <body id="body">
 
 <label for="select-size">Select Size:</label>
-<select id="select-size" name="select-size" oninput="onChooseSize(+this.value)">
+<select id="select-size" name="select-size" oninput="resetBoard(+this.value)">
     <option value="4">XS (4 pairs)</option>
     <option value="9" selected>S (9 pairs)</option>
     <option value="16">M (16 pairs)</option>
@@ -19,16 +19,21 @@
 <label for="move-counter" style="margin-left: 2em">Moves: </label>
 <span id="move-counter">0</span>
 
-<hr/>
-
-<table id="board-table">
-</table>
+<label for="pair-counter" style="margin-left: 2em">Pairs: </label>
+<span id="pair-counter">0</span>
 
 <hr/>
 
+<div id="board-container">
+    <table id="board-table">
+    </table>
+    <div id="stash" class="stash"></div>
+</div>
 
-<div style="opacity: 0.5">Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a
-        href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+<footer style="opacity: 0.5; bottom: 8px; position: absolute">
+    Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>
+</footer>
 
 <script src="main.js"></script>
 
