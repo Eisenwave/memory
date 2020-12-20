@@ -25,6 +25,14 @@ td {
     border: none;
 }
 
+.top-label {
+    margin-left: 2em;
+}
+
+.stats {
+    font-weight: bold;
+}
+
 .board-table {
     border-collapse: collapse;
     padding: 0;

@@ -16,11 +16,14 @@
     <option value="36">XL (36 pairs)</option>
 </select>
 
-<label for="move-counter" style="margin-left: 2em">Moves: </label>
-<span id="move-counter">0</span>
+<label for="move-counter" class="top-label">Moves: </label>
+<span id="move-counter" class="stats">0</span>
 
-<label for="pair-counter" style="margin-left: 2em">Pairs: </label>
-<span id="pair-counter">0</span>
+<label for="pair-counter" class="top-label">Pairs: </label>
+<span id="pair-counter" class="stats">0</span>
+
+<label for="match-rate" class="top-label">Match Rate: </label>
+<span id="match-rate" class="stats"></span>
 
 <hr/>
 
@@ -39,7 +42,7 @@
 
 <script async>
     for (let icon of ICONS) {
-        new Image().src = CARD_PATH + "/" + icon + ".svg";
+        new Image().src = CARD_PATH + "/" + icon + ICON_EXT;
     }
 </script>
 
