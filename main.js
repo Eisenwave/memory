@@ -211,6 +211,7 @@ function choosePair(first, second) {
     let stashedCard = first.cloneNode(false);
     E_STASH.appendChild(stashedCard);
     stashedCard.active = false;
+    stashedCard.classList.add("stashed")
 
     for (let card of [first, second]) {
         card.stashed = true;

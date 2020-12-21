@@ -5,6 +5,8 @@
     --card-icon-size: 96px;
     --card-padding: 8px;
     --card-size: calc(var(--card-icon-size) + 2 * var(--card-padding));
+    --card-border-size: 2px;
+    --card-total-size: calc(var(--card-size) + 2 * var(--card-border-size));
 }
 
 body {
@@ -42,9 +44,10 @@ td {
     padding: 8px;
     background-color: #c2f1bf;
     border: 2px solid #87b387;
-    min-height: var(--card-size);
+    min-height: calc(var(--card-total-size) + var(--card-padding));
     display: flex;
     flex-wrap: wrap;
+    margin-top: 2em;
 }
 
 .card {
@@ -55,7 +58,7 @@ td {
     repeating-linear-gradient(45deg, var(--stripe1), var(--stripe1) var(--stripe-width),
             var(--stripe2) var(--stripe-width), var(--stripe2) calc(var(--stripe-width) * 2));
     background-blend-mode: darken;
-    border: 2px solid #888;
+    border: var(--card-border-size) solid #888;
 
     padding: 8px;
     margin: 2px;
@@ -69,6 +72,11 @@ td {
 
 .card:not(.flipped) {
     padding: 0;
+}
+
+.card:hover:not(.stashed):not(.hidden) {
+    filter: saturate(110%) brightness(105%);
+    cursor: pointer;
 }
 
 .hidden {
